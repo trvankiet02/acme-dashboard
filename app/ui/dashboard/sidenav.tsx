@@ -6,7 +6,7 @@ import { signOut } from "@/auth";
 
 async function handleSignOut() {
   "use server";
-  await signOut();
+  await signOut({ redirect: true, redirectTo: "/" });
 }
 
 export default function SideNav() {
